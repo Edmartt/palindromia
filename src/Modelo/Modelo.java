@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Modelo;
+
+import Vista.Vista;
 
 /**
  *
@@ -56,7 +54,7 @@ public class Modelo {
     }
     
     
-    public void invertir(){
+    public void invertirCadena(){
         
         for (int i =this.texto.length()-1; i >=0; i--) {
             if (this.texto.charAt(i)!=' ') {
@@ -76,5 +74,88 @@ public class Modelo {
     
     }   
     
+    
+    public void accionarEvento(Vista view){
+        
+         if (view.txt_texto.getText().isBlank()) {
+                
+                       view.lbl_mensaje.setText("La caja está en blanco, por favor introduzca una palabra");
+                       view.lbl_comprobado.setText("");            }
+                 
+                   
+                   
+         else if (!view.txt_texto.getText().isBlank()) {
+             
+                   if (esNumerico(texto)==true) {
+                       
+                       
+                        this.setTexto(view.txt_texto.getText());
+        
+                         this.eliminarEspacios(this.getTexto());
+             
+                         this.invertirCadena();
+            
+             
+                 
+                 
+                         view.lbl_mensaje.setText(this.getInvertida());
+                 
+                 if (this.getInvertida().equals(this.getTexto2())){
+                     view.lbl_comprobado.setText("Palabra Palíndroma");
+           
+             }
+                 
+                  else{
+                     view.lbl_comprobado.setText("No es una palabra Palíndroma");
+          
+        
+             }
+           
+                 /*Volvemos las cadenas a su estado original que es cadenas en blanco*/
+                
+                 this.setTexto("");
+                 this.setTexto2("");
+                 this.setInvertida("");
+                       
+                       
+                       
+                       
+                 
+             } // fin if anidado que va después del else if
+                   
+                   
+                   else{
+                       view.lbl_comprobado.setText("");
+                       view.lbl_mensaje.setText("La cadena es totalmente numérica, ingrese una palabra con caracteres no numéricos");
+                       
+                       
+                   }
+                      
+                   
+                   
+                   }      //fin else if
+            
+        
+      
+          
+           
+                    
+        
+        
+    }
+    
+    
+    public boolean esNumerico(String texto){
+        boolean resultado;
+        try {
+            Integer.parseInt(texto);
+            resultado= true;
+        } catch (NumberFormatException e) {
+            resultado= false;
+            
+        }
+        
+        return resultado;
+    }
     
 }
