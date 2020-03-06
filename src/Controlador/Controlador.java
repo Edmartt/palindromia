@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Modelo.Imagen;
 import Modelo.Modelo;
 import Vista.Vista;
 import java.awt.event.ActionEvent;
@@ -13,6 +14,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import javax.swing.JOptionPane;
 /**
  *
@@ -23,7 +25,7 @@ public class Controlador implements ActionListener{
     private Vista view;
     private Modelo model;
     
-    int x,y;
+    int x,y,ancho,alto;
     
     
    
@@ -35,10 +37,23 @@ public class Controlador implements ActionListener{
        
         
         
+        
+                 ancho=view.pn_fondo.getWidth();
+                alto=view.pn_fondo.getHeight();
+                String ruta="/img/dragonball.jpg";
+               Imagen imagen= new Imagen(ancho,alto,ruta);
+               
+                view.pn_fondo.add(imagen);
+                view.pn_fondo.repaint();
+        
+        
+        
+        
         this.view.btn_ingresar.addActionListener(this);
         
         this.view.txt_texto.addKeyListener(new KeyAdapter() { 
             
+            @Override
             public void keyPressed(KeyEvent event){
                 if (event.getKeyCode()==KeyEvent.VK_ENTER) {
                     
@@ -75,13 +90,35 @@ public class Controlador implements ActionListener{
         
         );
         
-//         int ancho=this.view.pn_fondo.getWidth();
-//    int alto=this.view.pn_fondo.getHeight();
-//    String ruta="/img/dragon ball.jpg";
-//    Imagen img= new Imagen(ancho,alto,ruta); 
-//        
-//    this.view.pn_fondo.add(img);
-//    this.view.pn_fondo.repaint();
+        
+        this.view.pn_barra.addMouseListener(new MouseAdapter() {
+        
+            @Override
+            public void mousePressed(MouseEvent e){
+                
+                    x=e.getX();
+                    y=e.getY();
+                
+            
+            }
+        
+        });
+        
+        
+        this.view.pn_barra.addMouseMotionListener(new MouseMotionAdapter() {
+            
+            @Override
+            public void mouseDragged(MouseEvent evt){
+                int xx=evt.getXOnScreen();
+                int yy=evt.getYOnScreen();
+                view.setLocation(xx - x,yy - y);
+            
+            }
+        
+        });
+        
+        
+
         
         
        
