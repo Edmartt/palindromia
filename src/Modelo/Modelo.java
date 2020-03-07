@@ -10,6 +10,15 @@ import Vista.Vista;
 public class Modelo {
     
     private String texto="",invertida="",texto2="";
+    
+    
+    
+    public Modelo(){
+        //Vista view=new Vista();
+        
+        
+    
+    }
 
     /**
      *
@@ -169,7 +178,8 @@ public class Modelo {
     
     
     
-    /*Método para comprobar si la cadena completa es numérica. Solo sirve para cadenas completas, por tanto, si combinamos letras y números, lo leerá como una cadena común y corriente*/
+    /*Método para comprobar si la cadena completa es numérica. Solo sirve para cadenas completas,
+    por tanto, si combinamos letras y números, lo leerá como una cadena común y corriente*/
 
     /**
      *
@@ -193,5 +203,9 @@ public class Modelo {
         
         return resultado; /***Nos devuelve el resultado, sea falso o verdadero***/
     }
+    
+    
+
+    
     
 }

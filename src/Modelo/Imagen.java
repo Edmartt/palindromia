@@ -24,6 +24,7 @@ public class Imagen extends javax.swing.JPanel{
      
  }
   
+ @Override
  public void paint(Graphics g){
      
      Dimension height =getSize();

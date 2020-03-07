@@ -5,8 +5,6 @@
  */
 package Vista;
 
-import Modelo.Imagen;
-
 /**
  *
  * @author sam
@@ -57,7 +55,7 @@ public class Vista extends javax.swing.JFrame {
         btn_ingresar.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         btn_ingresar.setForeground(new java.awt.Color(254, 254, 254));
         btn_ingresar.setText("Ingresar");
-        btn_ingresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btn_ingresar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pn_fondo.add(btn_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 573, 102, 44));
 
         lbl_comprobado.setFont(new java.awt.Font("Cantarell", 1, 14)); // NOI18N
@@ -71,7 +69,7 @@ public class Vista extends javax.swing.JFrame {
         lbl_cerrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_cerrar.setText("X");
         lbl_cerrar.setToolTipText("cerrar");
-        lbl_cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lbl_cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout pn_barraLayout = new javax.swing.GroupLayout(pn_barra);
         pn_barra.setLayout(pn_barraLayout);

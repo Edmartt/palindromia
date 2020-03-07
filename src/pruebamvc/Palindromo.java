@@ -6,7 +6,6 @@
 package pruebamvc;
 
 import Controlador.Controlador;
-import Modelo.Imagen;
 import Modelo.Modelo;
 import Vista.Vista;
 
@@ -20,12 +19,13 @@ public class Palindromo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+       
         
 
-           Modelo model= new Modelo();
+           
         Vista view= new Vista();
-        Imagen img= new Imagen();
+      
+        Modelo model= new Modelo();
       
         
         
