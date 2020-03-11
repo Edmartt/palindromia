@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import Modelo.Imagen;
+
 import Modelo.Modelo;
 import Vista.Vista;
 import java.awt.event.ActionEvent;
@@ -38,14 +38,7 @@ public class Controlador implements ActionListener{
         
         
         
-                 ancho=view.pn_fondo.getWidth();
-                alto=view.pn_fondo.getHeight();
-                String ruta="/img/dragonball.jpg";
-               Imagen imagen= new Imagen(ancho,alto,ruta);
-               
-                view.pn_fondo.add(imagen);
-                view.pn_fondo.repaint();
-        
+     
         
         
         
