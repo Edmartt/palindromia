@@ -5,7 +5,6 @@
  */
 package Controlador;
 
-
 import Modelo.Modelo;
 import Vista.Vista;
 import java.awt.event.ActionEvent;
@@ -26,32 +25,11 @@ public class Controlador implements ActionListener {
     private Vista view;
     private Modelo model;
 
-
     int x, y, ancho, alto;
 
     public Controlador(Vista view, Modelo model) {
         this.view = view;
         this.model = model;
-
-     
-
-
-    
-
-    
-    
-   
-
-    
-
-       
-        
-        
-        
-     
-        
-        
-        
 
         this.view.btn_ingresar.addActionListener(this);
 
@@ -117,7 +95,6 @@ public class Controlador implements ActionListener {
         if (e.getSource() == this.view.btn_ingresar) {
 
             this.model.accionarEvento(view);
-            
 
         }
 
