@@ -40,6 +40,7 @@ public class Vista extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pn_fondo.setBackground(new java.awt.Color(254, 254, 254));
         pn_fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -88,16 +89,7 @@ public class Vista extends javax.swing.JFrame {
 
         pn_fondo.add(pn_barra, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 742, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pn_fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pn_fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 698, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        getContentPane().add(pn_fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 698));
 
         pack();
         setLocationRelativeTo(null);
