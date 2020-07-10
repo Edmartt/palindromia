@@ -5,10 +5,7 @@
  */
 package Controlador;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 96161070159cdb97bd4ab597c6d044b90ea13d2f
 import Modelo.Modelo;
 import Vista.Vista;
 import java.awt.event.ActionEvent;
@@ -28,7 +25,7 @@ public class Controlador implements ActionListener {
 
     private Vista view;
     private Modelo model;
-<<<<<<< HEAD
+
 
     int x, y, ancho, alto;
 
@@ -38,17 +35,15 @@ public class Controlador implements ActionListener {
 
      
 
-=======
+
     
-    int x,y,ancho,alto;
+
     
     
    
 
     
-    public Controlador(Vista view, Modelo model){
-        this.view=view;
-        this.model=model;
+
        
         
         
@@ -57,7 +52,7 @@ public class Controlador implements ActionListener {
         
         
         
->>>>>>> 96161070159cdb97bd4ab597c6d044b90ea13d2f
+
         this.view.btn_ingresar.addActionListener(this);
 
         this.view.txt_texto.addKeyListener(new KeyAdapter() {
