@@ -1,7 +1,7 @@
 # palindromia
 
 This is a Palindrome words detector. 
-I made for my learning and fun. I was trying to apply Controller View Model architecture pattern
+I made for my learning and fun. I was trying to apply Model View Controller architecture pattern
 
 1. Open the application
 
