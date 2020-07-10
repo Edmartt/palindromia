@@ -1,6 +1,7 @@
 /dist/
 <<<<<<< HEAD
 build/
+build/
 *.class
 nbproject/private/
 =======
