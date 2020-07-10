@@ -1,4 +1,9 @@
 /dist/
+<<<<<<< HEAD
 build/
 *.class
 nbproject/private/
+=======
+/nbproject/private/
+/build/
+>>>>>>> 96161070159cdb97bd4ab597c6d044b90ea13d2f
